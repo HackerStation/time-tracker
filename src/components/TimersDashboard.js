@@ -1,10 +1,13 @@
 import React from 'react';
+import EditableTimerList from './EditableTimerList';
+import ToggleableTimerForm from './ToggleableTimerForm';
 
 class TimersDashboard extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='main-title'>Timers</h1>
+        <EditableTimerList />
+        <ToggleableTimerForm isOpen={true} />
       </div>
     );
   }
