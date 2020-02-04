@@ -1,0 +1,8 @@
+.main-title {
+  text-align: center;
+  width: 80%;
+  max-width: 796px;
+  margin: 20px auto;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 4px;
+}
