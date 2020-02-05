@@ -4,22 +4,40 @@ class TimerForm extends React.Component {
   render() {
     const submitText = this.props.title ? 'Update' : 'Create';
     return (
-      <div className='form'>
-        <div className='input-list'>
-          <div className='input-list-item'>
+      <React.Fragment>
+        <form className='mt-5' style={{ width: '100%' }}>
+          <div className='form-group'>
             <label>Title</label>
-            <input type='text' defaultValue={this.props.title} />
+            <input
+              type='text'
+              className='form-control'
+              placeholder='Title'
+              defaultValue={this.props.title}
+            />
           </div>
-          <div className='input-list-item'>
+          <div className='form-group'>
             <label>Project</label>
-            <input type='text' defaultValue={this.props.project} />
+            <input
+              type='text'
+              className='form-control'
+              placeholder='Project'
+              defaultValue={this.props.project}
+            />
           </div>
-          <div className='button-group'>
-            <button className='btn btn-blue'>{submitText}</button>
-            <button className='btn btn-red'>Cancel</button>
+          <div
+            className='btn-group d-flex'
+            role='group'
+            aria-label='Basic example'
+          >
+            <button type='button' className='btn btn-primary'>
+              {submitText}
+            </button>
+            <button type='button' className='btn btn-danger ml-2'>
+              Cancel
+            </button>
           </div>
-        </div>
-      </div>
+        </form>
+      </React.Fragment>
     );
   }
 }

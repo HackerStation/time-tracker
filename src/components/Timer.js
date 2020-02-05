@@ -5,7 +5,7 @@ import { FaRegEdit, FaTrash } from 'react-icons/fa';
 class Timer extends React.Component {
   styles = {
     card: {
-      width: '24rem'
+      width: '100%'
     },
     buttonGroup: {
       display: 'flex',
