@@ -4,9 +4,13 @@ import TimersDashboard from './components/TimersDashboard';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='container'>
       <h1 className='main-title'>Timers</h1>
-      <TimersDashboard />
+      <div className='mt-5 row'>
+        <div className='col-4 m-auto'>
+          <TimersDashboard />
+        </div>
+      </div>
     </div>
   );
 }

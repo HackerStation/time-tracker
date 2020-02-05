@@ -4,7 +4,7 @@ import EditableTimer from './EditableTimer';
 class EditableTimerList extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <EditableTimer
           title='Learn React'
           project='Web Domination'
@@ -19,7 +19,7 @@ class EditableTimerList extends React.Component {
           runningSince={null}
           editFormOpen={true}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

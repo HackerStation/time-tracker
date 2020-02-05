@@ -5,10 +5,10 @@ import ToggleableTimerForm from './ToggleableTimerForm';
 class TimersDashboard extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <EditableTimerList />
         <ToggleableTimerForm isOpen={true} />
-      </div>
+      </React.Fragment>
     );
   }
 }
