@@ -6,7 +6,7 @@ class EditableTimerList extends React.Component {
     return (
       <React.Fragment>
         {this.props.timers.map(timer => (
-          <EditableTimer {...timer} />
+          <EditableTimer {...timer} key={timer.id} />
         ))}
       </React.Fragment>
     );
