@@ -7,12 +7,13 @@ class EditableTimer extends React.Component {
     editFormOpen: false
   };
   render() {
-    const { title, project, elapsed, runningSince } = this.props;
+    const { id, title, project, elapsed, runningSince } = this.props;
     if (this.state.editFormOpen) {
-      return <TimerForm title={title} project={project} />;
+      return <TimerForm id={id} title={title} project={project} />;
     } else {
       return (
         <Timer
+          id={id}
           title={title}
           project={project}
           elapsed={elapsed}

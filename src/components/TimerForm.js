@@ -1,6 +1,23 @@
 import React from 'react';
 
 class TimerForm extends React.Component {
+  state = {
+    title: this.props.title || '',
+    project: this.props.project || ''
+  };
+
+  handleTitleChange = title => {
+    this.setState({
+      title: title
+    });
+  };
+
+  handleProjectChange = project => {
+    this.setState({
+      project: project
+    });
+  };
+
   render() {
     const submitText = this.props.title ? 'Update' : 'Create';
     return (
@@ -12,7 +29,8 @@ class TimerForm extends React.Component {
               type='text'
               className='form-control'
               placeholder='Title'
-              defaultValue={this.props.title}
+              value={this.state.title}
+              onChange={e => this.handleTitleChange(e.target.value)}
             />
           </div>
           <div className='form-group'>
@@ -21,7 +39,8 @@ class TimerForm extends React.Component {
               type='text'
               className='form-control'
               placeholder='Project'
-              defaultValue={this.props.project}
+              value={this.state.project}
+              onChange={e => this.handleProjectChange(e.target.value)}
             />
           </div>
           <div
