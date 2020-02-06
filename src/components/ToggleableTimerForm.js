@@ -6,11 +6,21 @@ class ToggleableTimerForm extends React.Component {
   state = {
     isOpen: false
   };
+  handleFormClose = () => {
+    this.setState({ isOpen: false });
+  };
+
+  handleFormSubmit = timer => {
+    this.props.onFormSubmit(timer);
+    this.setState({ isOpen: false });
+  };
+
   render() {
     if (this.state.isOpen) {
       return (
         <TimerForm
-          handleCancelSubmit={() => this.setState({ isOpen: false })}
+          onFormClose={this.handleFormClose}
+          onFormSubmit={this.handleFormSubmit}
         />
       );
     } else {
