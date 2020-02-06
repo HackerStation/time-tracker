@@ -10,15 +10,13 @@ class TimersDashboard extends React.Component {
         title: 'Learn React',
         project: 'Web Domination',
         elapsed: '8986300',
-        runningSince: null,
-        editFormOpen: false
+        runningSince: null
       },
       {
         title: 'Learn extreme ironing',
         project: 'World domination',
         elapsed: '3890985',
-        runningSince: null,
-        editFormOpen: true
+        runningSince: null
       }
     ]
   };
