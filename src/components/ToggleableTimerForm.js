@@ -8,7 +8,11 @@ class ToggleableTimerForm extends React.Component {
   };
   render() {
     if (this.state.isOpen) {
-      return <TimerForm />;
+      return (
+        <TimerForm
+          handleCancelSubmit={() => this.setState({ isOpen: false })}
+        />
+      );
     } else {
       return (
         <div className='btn-container text-center'>

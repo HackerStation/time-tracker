@@ -18,6 +18,10 @@ class TimerForm extends React.Component {
     });
   };
 
+  handleCancel = () => {
+    this.props.handleCancelSubmit();
+  };
+
   render() {
     const submitText = this.props.title ? 'Update' : 'Create';
     return (
@@ -51,7 +55,11 @@ class TimerForm extends React.Component {
             <button type='button' className='btn btn-outline-primary'>
               {submitText}
             </button>
-            <button type='button' className='btn btn-outline-danger ml-2'>
+            <button
+              type='button'
+              className='btn btn-outline-danger ml-2'
+              onClick={this.handleCancel}
+            >
               Cancel
             </button>
           </div>
