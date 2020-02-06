@@ -4,7 +4,6 @@ import ToggleableTimerForm from './ToggleableTimerForm';
 
 class TimersDashboard extends React.Component {
   state = {
-    isOpen: true,
     timers: [
       {
         title: 'Learn React',
@@ -25,7 +24,7 @@ class TimersDashboard extends React.Component {
     return (
       <React.Fragment>
         <EditableTimerList timers={timers} />
-        <ToggleableTimerForm isOpen={isOpen} />
+        <ToggleableTimerForm />
       </React.Fragment>
     );
   }

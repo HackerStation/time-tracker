@@ -21,7 +21,7 @@ class Timer extends React.Component {
     const { title, project, elapsed } = this.props;
     const elapsedString = renderElapsedString(elapsed);
     return (
-      <div className='card' style={this.styles.card}>
+      <div className='card mt-3' style={this.styles.card}>
         <div className='card-body'>
           <h5 className='card-title'>{title}</h5>
           <h6 className='card-subtitle mb-2 text-muted'>{project}</h6>
