@@ -24,7 +24,7 @@ class TimerForm extends React.Component {
       <React.Fragment>
         <form className='mt-5' style={{ width: '100%' }}>
           <div className='form-group'>
-            <label>Title</label>
+            <label className='font-weight-bold'>Title</label>
             <input
               type='text'
               className='form-control'
@@ -34,7 +34,7 @@ class TimerForm extends React.Component {
             />
           </div>
           <div className='form-group'>
-            <label>Project</label>
+            <label className='font-weight-bold'>Project</label>
             <input
               type='text'
               className='form-control'
@@ -48,10 +48,10 @@ class TimerForm extends React.Component {
             role='group'
             aria-label='Basic example'
           >
-            <button type='button' className='btn btn-primary'>
+            <button type='button' className='btn btn-outline-primary'>
               {submitText}
             </button>
-            <button type='button' className='btn btn-danger ml-2'>
+            <button type='button' className='btn btn-outline-danger ml-2'>
               Cancel
             </button>
           </div>

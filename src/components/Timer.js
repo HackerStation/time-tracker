@@ -14,7 +14,8 @@ class Timer extends React.Component {
     button: {
       border: 'none',
       background: '#fff',
-      padding: '0'
+      padding: 0,
+      margin: '4px'
     }
   };
   handleEditClick = () => {
@@ -24,24 +25,25 @@ class Timer extends React.Component {
     const { title, project, elapsed } = this.props;
     const elapsedString = renderElapsedString(elapsed);
     return (
-      <div className='card mt-3' style={this.styles.card}>
+      <div className='card mt-4' style={this.styles.card}>
         <div className='card-body'>
           <h5 className='card-title'>{title}</h5>
           <h6 className='card-subtitle mb-2 text-muted'>{project}</h6>
           <h1 className='card-text text-center mt-4 mb-4'>{elapsedString}</h1>
           <div className='btn-group' style={this.styles.buttonGroup}>
             <button
-              className='card-link'
+              className='text-primary'
               style={this.styles.button}
               onClick={this.handleEditClick}
             >
-              <FaRegEdit />
+              <FaRegEdit size={20} />
             </button>
-            <button className='card-link' style={this.styles.button}>
-              <FaTrash />
+            <button className='text-danger' style={this.styles.button}>
+              <FaTrash size={18} />
             </button>
           </div>
         </div>
+        <button className='btn btn-outline-primary btn-block'>Start</button>
       </div>
     );
   }

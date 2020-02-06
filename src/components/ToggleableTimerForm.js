@@ -13,7 +13,7 @@ class ToggleableTimerForm extends React.Component {
       return (
         <div className='btn-container text-center'>
           <button
-            className='btn btn-light mt-5'
+            className='btn btn-outline-primary mt-5'
             onClick={() => this.setState({ isOpen: true })}
           >
             <FaPlusSquare size={36} />
