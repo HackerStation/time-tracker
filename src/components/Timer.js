@@ -17,6 +17,9 @@ class Timer extends React.Component {
       padding: '0'
     }
   };
+  handleEditClick = () => {
+    this.props.handleEdit();
+  };
   render() {
     const { title, project, elapsed } = this.props;
     const elapsedString = renderElapsedString(elapsed);
@@ -27,7 +30,11 @@ class Timer extends React.Component {
           <h6 className='card-subtitle mb-2 text-muted'>{project}</h6>
           <h1 className='card-text text-center mt-4 mb-4'>{elapsedString}</h1>
           <div className='btn-group' style={this.styles.buttonGroup}>
-            <button className='card-link' style={this.styles.button}>
+            <button
+              className='card-link'
+              style={this.styles.button}
+              onClick={this.handleEditClick}
+            >
               <FaRegEdit />
             </button>
             <button className='card-link' style={this.styles.button}>
